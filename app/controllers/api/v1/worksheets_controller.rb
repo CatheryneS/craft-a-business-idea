@@ -1,4 +1,4 @@
-class WorksheetsController < ApplicationController
+class API::V1::WorksheetsController < ApplicationController
 
     def index
         worksheets = Worksheet.all
