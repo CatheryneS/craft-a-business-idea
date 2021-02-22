@@ -1,2 +1,2 @@
-class API::V1::WorldNeedsController < ApplicationController
+class Api::V1::WorldNeedsController < ApplicationController
 end

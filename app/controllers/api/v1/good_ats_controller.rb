@@ -1,2 +1,2 @@
-class API::V1::GoodAtsController < ApplicationController
+class Api::V1::GoodAtsController < ApplicationController
 end
