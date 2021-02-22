@@ -19,4 +19,11 @@ class Api::V1::SessionsController < ApplicationController
             }
         end
     end
+
+    def destory 
+        session.clear
+        render json: {
+            notice: "User logged out"
+        }
+    end
 end
