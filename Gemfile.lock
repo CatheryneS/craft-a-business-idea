@@ -44,6 +44,7 @@ GEM
       tzinfo (~> 1.1)
     arel (9.0.0)
     bcrypt (3.1.16)
+    bcrypt (3.1.16-java)
     bootsnap (1.7.2)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -59,6 +60,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
+    jsonapi-serializer (2.1.0)
+      activesupport (>= 4.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -164,6 +167,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
+  jsonapi-serializer
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
