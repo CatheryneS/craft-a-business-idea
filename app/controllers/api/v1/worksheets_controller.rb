@@ -6,8 +6,10 @@ class Api::V1::WorksheetsController < ApplicationController
     end
 
     def show
-        byebug
-        worksheet = Worksheet.last
+        # byebug
+        worksheet = Worksheet.find_by(id: params[:id])
+
+        render json: WorksheetSerializer.new(worksheet)
     end
 
     def create
@@ -20,7 +22,10 @@ class Api::V1::WorksheetsController < ApplicationController
         end
 
         if !worksheet.love.empty? && !worksheet.good_ats.empty? && !worksheet.world_needs.empty?
-            render json: worksheet, status: :created
+            # completed_worksheet = [] 
+            # completed_worksheet.push(worksheet.love, worksheet.good_ats, worksheet.world_needs)
+
+            render json: WorksheetSerializer.new(worksheet), status: :created
         else
             resp = { error: worksheet.errors.full_messages.to_sentence}
             render json: resp, status: :unprocessable_entity

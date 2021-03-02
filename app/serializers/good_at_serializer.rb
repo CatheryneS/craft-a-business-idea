@@ -1,4 +1,4 @@
 class GoodAtSerializer
   include JSONAPI::Serializer
-  attributes :content
+  attribute :content
 end

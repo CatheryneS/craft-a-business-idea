@@ -1,4 +1,4 @@
 class LoveSerializer
   include JSONAPI::Serializer
-  attributes :content
+  attribute :content
 end
