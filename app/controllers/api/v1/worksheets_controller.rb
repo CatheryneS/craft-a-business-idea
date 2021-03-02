@@ -2,7 +2,12 @@ class Api::V1::WorksheetsController < ApplicationController
 
     def index
         worksheets = Worksheet.all
-        render json: worksheets
+        render json: WorksheetSerializer.new(worksheets)
+    end
+
+    def show
+        byebug
+        worksheet = Worksheet.last
     end
 
     def create

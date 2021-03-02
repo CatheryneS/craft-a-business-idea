@@ -1,9 +1,14 @@
 class Api::V1::UsersController < ApplicationController
 
     def index
-        user = User.all
+        users = User.all
 
-        render json: user
+        render json: UserSerializer.new(users)
+    end
+
+    def show 
+        debugger
+        user = User.find_by(id: )
     end
 
     def create
